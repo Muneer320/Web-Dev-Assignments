@@ -150,4 +150,33 @@ document.addEventListener("DOMContentLoaded", () => {
       heroButton.style.transform = "";
     });
   }
+
+  const contactForm = document.querySelector(".contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const name = (formData.get("name") || "").toString().trim();
+      const email = (formData.get("email") || "").toString().trim();
+      const message = (formData.get("message") || "").toString().trim();
+
+      const subjectBase = name
+        ? `Hello from ${name}`
+        : "Hello from your portfolio";
+      const subject = encodeURIComponent(subjectBase);
+
+      const bodyLines = [
+        message || "Hi Muneer,",
+        "",
+        name ? `— ${name}` : "",
+        email ? `Email: ${email}` : "",
+      ].filter(Boolean);
+
+      const body = encodeURIComponent(bodyLines.join("\n"));
+      const mailto = `mailto:muneer.alam320@gmail.com?subject=${subject}&body=${body}`;
+
+      window.open(mailto, "_blank", "noopener,noreferrer");
+    });
+  }
 });

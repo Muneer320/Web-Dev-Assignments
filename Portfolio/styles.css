@@ -41,7 +41,7 @@ body.page {
   line-height: var(--line-height);
   color: var(--paper-ink);
   background-color: var(--paper);
-  background-image: url("https://www.transparenttextures.com/patterns/old-map.png"),
+  background-image: url("Assets/old-map.png"),
     radial-gradient(
       circle at 20% 20%,
       rgba(255, 255, 255, 0.45),
@@ -113,6 +113,31 @@ img {
   display: block;
 }
 
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
+  fill: currentColor;
+}
+
+.icon-badge {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(196, 104, 63, 0.12);
+  color: var(--accent-muted);
+  box-shadow: inset 0 0 0 1px rgba(47, 42, 38, 0.1);
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -172,6 +197,38 @@ a:focus-visible {
   backdrop-filter: blur(6px);
 }
 
+.handle-banner {
+  overflow: hidden;
+  background: rgba(231, 214, 181, 0.6);
+  border-block: 1px solid rgba(47, 42, 38, 0.12);
+  position: relative;
+}
+
+.handle-track {
+  display: flex;
+  gap: 2rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(47, 42, 38, 0.55);
+  animation: marquee 18s linear infinite;
+  padding-block: 0.4rem;
+}
+
+.handle-track span {
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .nav-wrapper {
   display: flex;
   align-items: center;
@@ -188,9 +245,9 @@ a:focus-visible {
 }
 
 .brand-mark {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  letter-spacing: 0.05em;
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   border: 2px solid var(--paper-soft-ink);
   border-radius: 50%;
   width: 48px;
@@ -204,6 +261,7 @@ a:focus-visible {
     rgba(231, 214, 181, 0.7)
   );
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12);
+  text-transform: uppercase;
 }
 
 .brand-text {
@@ -221,6 +279,15 @@ a:focus-visible {
 .brand-role {
   font-size: 0.7rem;
   opacity: 0.75;
+}
+
+.brand-handle {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: lowercase;
+  color: var(--accent-muted);
+  margin-top: 0.2rem;
 }
 
 .site-nav {
@@ -276,6 +343,7 @@ a:focus-visible {
 }
 
 .hero {
+  position: relative;
   padding-block: clamp(4rem, 10vw, 7rem);
   background-image: var(--hero-gradient);
 }
@@ -362,6 +430,26 @@ a:focus-visible {
   gap: 0.75rem;
 }
 
+.hero-handle {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  letter-spacing: 0.28em;
+  text-transform: none;
+  opacity: 0.65;
+  color: var(--paper-soft-ink);
+}
+
+.hero-handle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-handle a:hover,
+.hero-handle a:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
 .hero-portrait img {
   border: 8px double rgba(47, 42, 38, 0.25);
   box-shadow: 0 12px 20px rgba(33, 24, 16, 0.22);
@@ -405,7 +493,25 @@ a:focus-visible {
 }
 
 .about-bio ul {
-  padding-left: 1.1rem;
+  padding-left: 0;
+}
+
+.about-list {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.about-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.about-list .icon-badge {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
 }
 
 .about-highlights dl {
@@ -580,6 +686,32 @@ a:focus-visible {
   color: var(--accent-muted);
 }
 
+.lab-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lab-links a {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(47, 42, 38, 0.22);
+  background: rgba(255, 255, 255, 0.8);
+  color: inherit;
+  transition: transform var(--transition), background-color var(--transition);
+}
+
+.lab-links a:hover,
+.lab-links a:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(196, 104, 63, 0.12);
+}
+
 .testimonials {
   background: linear-gradient(
     180deg,
@@ -647,6 +779,10 @@ a:focus-visible {
   gap: 0.8rem;
   font-family: var(--font-display);
   letter-spacing: 0.08em;
+}
+
+.contact-links .icon-badge {
+  flex-shrink: 0;
 }
 
 .contact-form {
@@ -780,6 +916,9 @@ a:focus-visible {
   .brand-role {
     display: none;
   }
+  .brand-handle {
+    display: none;
+  }
 
   .wrapper {
     width: min(100%, 94vw);
@@ -853,5 +992,9 @@ a:focus-visible {
 
   .intro-overlay {
     display: none !important;
+  }
+
+  .handle-track {
+    animation: none !important;
   }
 }
