@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferris Wheel</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at 50% 20%, #eaf3ff, #f6f8fb);
+        font-family: system-ui, Segoe UI, Arial, sans-serif;
+      }
+
+      /* Scene container */
+      .wheel {
+        width: 320px;
+        height: 320px;
+        border: 8px solid #2d2d2d; /* rim */
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) inset,
+          0 4px 16px rgba(0, 0, 0, 0.1);
+        animation: spin 12s linear infinite; /* clockwise */
+      }
+
+      /* Center hub */
+      .hub {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 18px;
+        height: 18px;
+        background: #2d2d2d;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 4px #fff inset;
+      }
+
+      /* Spokes (lines) */
+      .spoke {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 4px;
+        height: calc(50% - 8px);
+        background: #5a5a5a;
+        transform-origin: 50% 0%;
+        transform: translate(-50%, 0) rotate(var(--angle, 0deg));
+      }
+
+      /* Cars (squares) at spoke ends */
+      .car {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-origin: 50% 50%;
+      }
+      
+      .car {
+        transform: rotate(var(--angle)) translateY(-152px);
+      }
+      .box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 26px;
+        height: 26px;
+        border: 2px solid #111;
+        border-radius: 4px;
+        transform: translate(-50%, -50%);
+        animation: carSpin 40s linear infinite, colorShift 6s linear infinite;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Keyframes */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes carSpin {
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      @keyframes colorShift {
+        0% {
+          background: hsl(0, 80%, 60%);
+        }
+        25% {
+          background: hsl(45, 80%, 60%);
+        }
+        50% {
+          background: hsl(140, 70%, 55%);
+        }
+        75% {
+          background: hsl(210, 80%, 60%);
+        }
+        100% {
+          background: hsl(300, 70%, 60%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wheel" aria-label="Animated ferris wheel">
+      <!-- 6 spokes at 0, 60, 120, 180, 240, 300 degrees -->
+      <div class="spoke" style="--angle: 0deg"></div>
+      <div class="spoke" style="--angle: 60deg"></div>
+      <div class="spoke" style="--angle: 120deg"></div>
+      <div class="spoke" style="--angle: 180deg"></div>
+      <div class="spoke" style="--angle: 240deg"></div>
+      <div class="spoke" style="--angle: 300deg"></div>
+
+      <!-- cars at the ends of spokes -->
+      <div class="car" style="--angle: 0deg">
+        <div class="box" aria-label="car"></div>
+      </div>
+      <div class="car" style="--angle: 60deg">
+        <div class="box" aria-label="car"></div>
+      </div>
+      <div class="car" style="--angle: 120deg">
+        <div class="box" aria-label="car"></div>
+      </div>
+      <div class="car" style="--angle: 180deg">
+        <div class="box" aria-label="car"></div>
+      </div>
+      <div class="car" style="--angle: 240deg">
+        <div class="box" aria-label="car"></div>
+      </div>
+      <div class="car" style="--angle: 300deg">
+        <div class="box" aria-label="car"></div>
+      </div>
+
+      <div class="hub" aria-hidden="true"></div>
+    </div>
+    <div class="shadow" aria-hidden="true"></div>
+  </body>
+</html>

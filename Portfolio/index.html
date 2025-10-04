@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muneer Alam · Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Muneer Alam – full-stack developer, creative technologist, and first-year B.Tech student at Scaler School of Technology."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='18' ry='18' fill='%23f1e7d0'/%3E%3Cpath d='M36 32h56v10H75v44h17v10H36V86h17V42H36z' fill='%23333333'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body class="page" data-theme="day">
+    <div class="intro-overlay" aria-hidden="true">
+      <span class="intro-name">Muneer Alam</span>
+    </div>
+    <header class="site-header" id="top">
+      <div class="wrapper nav-wrapper">
+        <a class="brand" href="#home" aria-label="Home">
+          <span class="brand-mark" aria-hidden="true">MA</span>
+          <span class="brand-text">
+            <span class="brand-name">Muneer Alam</span>
+            <span class="brand-role">Creative Technologist</span>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-text">Menu</span>
+        </button>
+        <nav class="site-nav" aria-label="Primary">
+          <ul id="primary-navigation" class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="site-main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrapper hero-wrapper" data-scroll>
+          <div class="hero-copy">
+            <p class="hero-eyebrow">Handcrafted digital stories</p>
+            <h1 id="hero-title">
+              Building thoughtful tech with a human touch.
+            </h1>
+            <p class="hero-subtitle">
+              I am a full-stack developer with over six years of hands-on
+              experience across web, mobile, AI, and security, now studying
+              B.Tech (Computer Science) at Scaler School of Technology in
+              Bengaluru. I blend engineering discipline with playful,
+              story-driven aesthetics to craft experiences that feel timeless.
+            </p>
+            <div class="hero-actions">
+              <a class="btn cta" href="#projects">View My Work</a>
+              <a class="btn ghost" href="mailto:muneer.example@scaler.com"
+                >Let's Collaborate</a
+              >
+              <a class="btn tertiary" href="#about">Read My Story</a>
+            </div>
+          </div>
+          <figure class="hero-portrait">
+            <div class="portrait-frame" aria-hidden="true"></div>
+            <img
+              src="Assets/Pic-1.jpg"
+              alt="Muneer smiling in soft vintage lighting."
+              loading="lazy"
+            />
+            <figcaption>Always tinkering. Always learning.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="wrapper section-wrapper" data-scroll>
+          <header class="section-header">
+            <p class="section-tag">About</p>
+            <h2 id="about-title">Engineer, storyteller, perpetual student.</h2>
+            <p>
+              From building desktop GUI tools to architecting AI pipelines, I
+              thrive wherever curiosity meets code. My journey spans full-stack
+              web development, distributed systems, web3, cybersecurity, Android
+              builds, and creative coding experiments that blur the line between
+              art and engineering.
+            </p>
+          </header>
+          <div class="about-columns">
+            <article class="about-bio" aria-label="Bio">
+              <h3>Currently</h3>
+              <ul>
+                <li>📍 Based in Bengaluru, India.</li>
+                <li>
+                  🎓 First-year B.Tech student, Scaler School of Technology.
+                </li>
+                <li>
+                  🔭 Exploring human-computer interfaces with tactile,
+                  human-centered design.
+                </li>
+              </ul>
+              <h3>Previously & Always</h3>
+              <p>
+                Six years of freelance and collaborative work across
+                industries—from startups seeking MVPs to research labs
+                experimenting with edge AI. I code in <strong>Python</strong>,
+                <strong>JavaScript</strong>, <strong>Java</strong>,
+                <strong>Kotlin</strong>, and build with <strong>React</strong>,
+                <strong>Next.js</strong>, <strong>Node</strong>,
+                <strong>Flask</strong>, <strong>FastAPI</strong>,
+                <strong>Flutter</strong>, and beyond.
+              </p>
+              <p>
+                I believe great products feel intuitive, have personality, and
+                leave users with a memorable story. I prototype fast, iterate
+                with purpose, and ship thoughtfully.
+              </p>
+            </article>
+            <aside class="about-highlights" aria-label="Quick stats">
+              <dl>
+                <div>
+                  <dt>Years crafting code</dt>
+                  <dd>6+</dd>
+                </div>
+                <div>
+                  <dt>Projects shipped</dt>
+                  <dd>48</dd>
+                </div>
+                <div>
+                  <dt>Domains explored</dt>
+                  <dd>Web3, CV, AI/ML, Security, DevTools</dd>
+                </div>
+                <div>
+                  <dt>Community</dt>
+                  <dd>Mentor, Hackathon Coach, Speaker</dd>
+                </div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills" aria-labelledby="skills-title">
+        <div class="wrapper section-wrapper" data-scroll>
+          <header class="section-header">
+            <p class="section-tag">Toolkit</p>
+            <h2 id="skills-title">A library of modern and vintage skills.</h2>
+            <p>
+              I love pairing cutting-edge tech with deliberate craftsmanship.
+              Here's a snapshot of tools that help me turn sketches into shipped
+              experiences.
+            </p>
+          </header>
+          <div class="skill-groups">
+            <article class="skill-card">
+              <h3>Full-Stack Foundations</h3>
+              <ul>
+                <li>TypeScript · JavaScript · Python</li>
+                <li>Node.js · Express · FastAPI</li>
+                <li>React · Next.js · Astro</li>
+                <li>PostgreSQL · MongoDB · Redis</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <h3>Experience Craft</h3>
+              <ul>
+                <li>Design systems & accessibility</li>
+                <li>Creative coding · WebGL tinkering</li>
+                <li>Motion & micro-interactions</li>
+                <li>Pixel-perfect interface systems</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <h3>Emerging Tech</h3>
+              <ul>
+                <li>Smart contracts · Web3 security audits</li>
+                <li>AI/ML prototyping · Computer Vision</li>
+                <li>Prompt engineering · LLM tooling</li>
+                <li>Cloud-native DevOps pipelines</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <h3>Mobile & Beyond</h3>
+              <ul>
+                <li>Android (Java · Kotlin)</li>
+                <li>Flutter · React Native</li>
+                <li>Hardware integrations · IoT</li>
+                <li>CLI/TUI experiences with Python</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects" aria-labelledby="projects-title">
+        <div class="wrapper section-wrapper" data-scroll>
+          <header class="section-header">
+            <p class="section-tag">Projects</p>
+            <h2 id="projects-title">
+              A curated collection of live experiences.
+            </h2>
+            <p>
+              Flashcard-styled showcases of recent explorations. Each card flips
+              to reveal the story, stack, and where to find it. Hover or tap to
+              peek behind the curtain.
+            </p>
+          </header>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="card-face front">
+                <h3>Orbital Stories</h3>
+                <p>
+                  Interactive celestial animations that teach orbital mechanics
+                  playfully.
+                </p>
+              </div>
+              <div class="card-face back">
+                <ul>
+                  <li>Stack: HTML · CSS · Motion Animations</li>
+                  <li>Role: Solo creator</li>
+                  <li><a href="../moon_motion.html">View Demo</a></li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="card-face front">
+                <h3>Analog Moments</h3>
+                <p>
+                  Reimagined photography diary with rich hover states and
+                  dynamic grids.
+                </p>
+              </div>
+              <div class="card-face back">
+                <ul>
+                  <li>Stack: CSS Grid · Responsive Design</li>
+                  <li>Role: Lead architect</li>
+                  <li><a href="../dog-gallery.html">Preview Gallery</a></li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="card-face front">
+                <h3>Cinematic Archive</h3>
+                <p>
+                  A minimalist catalog system for tracking films and metadata.
+                </p>
+              </div>
+              <div class="card-face back">
+                <ul>
+                  <li>Stack: Semantic HTML · Data tables</li>
+                  <li>Role: UX & Data modeling</li>
+                  <li><a href="../movie_collection.html">View Table</a></li>
+                </ul>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="card-face front">
+                <h3>Ferris Fields</h3>
+                <p>CSS-only kinetic sculpture with color-shifting motion.</p>
+              </div>
+              <div class="card-face back">
+                <ul>
+                  <li>Stack: CSS Animation · Accessibility</li>
+                  <li>Role: Motion designer</li>
+                  <li><a href="../ferris_wheeel.html">Ride the Wheel</a></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="labs" class="labs" aria-labelledby="labs-title">
+        <div class="wrapper section-wrapper" data-scroll>
+          <header class="section-header">
+            <p class="section-tag">Labs & Archives</p>
+            <h2 id="labs-title">
+              Experimental prototypes and research tangents.
+            </h2>
+            <p>
+              Beyond polished launches, I keep a cabinet of prototypes—terminal
+              UIs, AI playgrounds, and mobile experiments. Here are a few
+              snapshots; full case studies available on request.
+            </p>
+          </header>
+          <div class="lab-list">
+            <article class="lab-entry">
+              <h3>Sentinel Ledger</h3>
+              <p>
+                Lightweight blockchain explorer built for educators to explain
+                consensus mechanics with visual overlays.
+              </p>
+              <p class="lab-meta">Web3 · TypeScript · Three.js · 2024</p>
+            </article>
+            <article class="lab-entry">
+              <h3>Vision Atlas</h3>
+              <p>
+                Interactive computer vision notebook that maps model intuition
+                onto vintage cartography aesthetics.
+              </p>
+              <p class="lab-meta">Python · OpenCV · Streamlit · 2023</p>
+            </article>
+            <article class="lab-entry">
+              <h3>Echo CLI</h3>
+              <p>
+                Command-line assistant for developers combining AI auto-complete
+                with delightful ASCII art feedback.
+              </p>
+              <p class="lab-meta">Python · Rich · LLM APIs · 2022</p>
+            </article>
+            <article class="lab-entry">
+              <h3>Flutter Field Notes</h3>
+              <p>
+                A mobile journal system using Flutter for field researchers to
+                sync audio, sketches, and geotagged metadata.
+              </p>
+              <p class="lab-meta">Flutter · Firebase · UX Research · 2021</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="wrapper section-wrapper" data-scroll>
+          <header class="section-header">
+            <p class="section-tag">Kind words</p>
+            <h2 id="testimonials-title">Notes pressed between the pages.</h2>
+          </header>
+          <div class="testimonial-grid">
+            <figure class="testimonial-card">
+              <blockquote>
+                "Muneer navigates complex systems with the calm curiosity of a
+                scientist and the heart of a designer. He's my go-to
+                collaborator for mission-critical prototypes."
+              </blockquote>
+              <figcaption>
+                <span class="name">Priya Sharma</span>
+                <span class="role">Principal Engineer, Nebula Labs</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial-card">
+              <blockquote>
+                "Our hackathon team jumped two levels with Muneer around. He
+                lifted our code quality, mentored juniors, and shipped
+                delightful surprises before every demo."
+              </blockquote>
+              <figcaption>
+                <span class="name">Arjun Mehta</span>
+                <span class="role">Founder, QuillStack</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial-card">
+              <blockquote>
+                "From AI pipelines to microcopy, he obsesses over every detail.
+                Expect creative risks that pay off."
+              </blockquote>
+              <figcaption>
+                <span class="name">Lina Park</span>
+                <span class="role">Product Lead, Prism Studio</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="wrapper section-wrapper" data-scroll>
+          <header class="section-header">
+            <p class="section-tag">Connect</p>
+            <h2 id="contact-title">Let's build something remarkable.</h2>
+            <p>
+              I'm always open to collaborations, mentorship chats, or nerding
+              out over creative coding techniques. Drop a note or reach out on
+              any platform below.
+            </p>
+          </header>
+          <div class="contact-grid">
+            <aside class="contact-info" aria-label="Contact details">
+              <ul class="contact-links">
+                <li>
+                  <span aria-hidden="true">✉️</span>
+                  <a href="mailto:muneer.example@scaler.com"
+                    >muneer.example@scaler.com</a
+                  >
+                </li>
+                <li>
+                  <span aria-hidden="true">💼</span>
+                  <a
+                    href="https://www.linkedin.com/in/muneer320"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <span aria-hidden="true">🐙</span>
+                  <a
+                    href="https://github.com/muneer320"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <span aria-hidden="true">🕊️</span>
+                  <a
+                    href="https://x.com/muneer320"
+                    target="_blank"
+                    rel="noopener"
+                    >X (Twitter)</a
+                  >
+                </li>
+                <li>
+                  <span aria-hidden="true">📷</span>
+                  <a
+                    href="https://www.instagram.com/muneer.alam1"
+                    target="_blank"
+                    rel="noopener"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </aside>
+            <form class="contact-form" aria-label="Contact form">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ada Lovelace"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="ada@example.com"
+                required
+              />
+
+              <label for="message">Your message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell me about your next idea..."
+              ></textarea>
+
+              <button class="btn cta" type="submit">Send Message</button>
+              <p class="form-note">
+                This form is a prototype—feel free to email me directly instead.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="wrapper footer-wrapper">
+        <div>
+          <p class="footer-brand">Hand-coded with care & paper textures.</p>
+          <p>
+            &copy; <span data-year></span> Muneer Alam. All rights reserved.
+          </p>
+        </div>
+        <a class="to-top" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

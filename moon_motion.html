@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon Motion</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at 50% 20%, #0b1b33, #0a1424);
+        color: #e8f0ff;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+      }
+
+      .scene {
+        position: relative;
+        width: 360px;
+        height: 360px;
+      }
+
+      /* Earth at the center */
+    .earth {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle at 35% 35%,
+        #4da6ff,
+        #1e5fa8 65%,
+        #0d3d6b
+      );
+      box-shadow: 0 0 20px rgba(77, 166, 255, 0.3),
+        inset 0 0 12px rgba(255, 255, 255, 0.15);
+    }
+
+      /* Orbit wrapper rotates, moving the moon around */
+      .orbit {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        animation: revolve 8s linear infinite;
+      }
+
+      /* Faint orbit ring for subtle guidance */
+      .orbit::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        border: 1px dashed rgba(255, 255, 255, 0.15);
+      }
+
+      /* Moon positioned from the center then translated outward */
+      .moon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) translateX(130px);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 35% 35%,
+          #fdfdfd,
+          #cfcfd9 70%,
+          #b1b2bf
+        );
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      }
+
+      @keyframes revolve {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene" aria-label="Earth with a revolving moon">
+      <div class="earth" aria-hidden="false" title="Earth"></div>
+      <div class="orbit" aria-hidden="true">
+        <div class="moon" title="Moon"></div>
+      </div>
+    </div>
+  </body>
+</html>
