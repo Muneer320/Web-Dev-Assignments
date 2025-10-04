@@ -151,6 +151,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const lifeClock = document.querySelector("[data-life-clock]");
+  if (lifeClock) {
+    const origin = new Date("2006-01-28T00:00:00");
+
+    const updateLifeClock = () => {
+      const now = new Date();
+      const diffMs = now.getTime() - origin.getTime();
+      const totalMinutes = Math.floor(diffMs / (1000 * 60));
+      const minutes = totalMinutes % 60;
+      const totalHours = Math.floor(totalMinutes / 60);
+      const hours = totalHours % 24;
+      const days = Math.floor(totalHours / 24);
+
+      const formatted = `${days.toLocaleString()} days ${hours} hours ${minutes} minutes`;
+      lifeClock.textContent = formatted;
+    };
+
+    updateLifeClock();
+    setInterval(updateLifeClock, 60 * 1000);
+  }
+
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (event) => {
